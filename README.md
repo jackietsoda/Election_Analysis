@@ -1,7 +1,7 @@
 # Election Analysis
 
 ## Project Overview
-The election commission has requested some additional data to complete the audit of a recent local congressional election. I have found the voter turnout for each county, the percentage of votes from each county out of the total count, and the county with the highest turnout
+The election commission has requested some additional data to complete the audit of a recent local congressional election. I have found the voter turnout for each county, the percentage of votes from each county out of the total count, and the county with the highest turnout. I have also included the number of votes and the percentage of the total votes each candidate received.
 
 ## Election Audit Results 
 **1. How many votes were cast in this congressional election?** 
@@ -43,4 +43,30 @@ Winning Percentage: 73.8%
 ## Summary
 Prepared for the Election Commission:
 
-This script is extremely useful for calculating can be modified to be used for other elections.n a summary statement, provide a business proposal to the election commission on how this script can be used—with some modifications—for any election. 
+This script is extremely useful for calculating the number of votes and percentage for each candidate and county in this election. This script can be modified to be used for other elections as well.
+
+Two things I would modify is including which politcal party each candidate is running for and another thing is adding important dates during the election like speeches from the candidates or deadlines for ballots.
+
+- We can modify the script by adding another column in the file named "Political Party." We can add in the political party in the original 'for loop' to find the candidate name so that the script will look like this:
+
+        for row in reader:
+        
+        # Add to the total vote count
+        total_votes = total_votes + 1
+
+        # Get the candidate name from each row.
+        candidate_name = row[2]
+
+        # Extract the county name from each row.
+        county_name = row[1]
+        
+        # Extract the political party from each row
+        political_party = row[3]
+
+- Another way to modify the script is to track the important dates in chronological order. You can do this by including this script: 
+        
+        from datetime import datetime
+        A=['4/21/2015', '10/14/2014', '9/16/2014', '7/10/2014', '8/11/2014', '8/3/2014', '7/20/2014', '7/6/2014', '4/21/2015', '4/21/2015']
+        
+        # create a list of sorted datetime objects
+        sorted_dates = sorted([datetime.strptime(d, FORMAT) for d in A])
