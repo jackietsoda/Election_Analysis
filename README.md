@@ -4,6 +4,11 @@
 The election commission has requested some additional data to complete the audit of a recent local congressional election. I have found the voter turnout for each county, the percentage of votes from each county out of the total count, and the county with the highest turnout. I have also included the number of votes and the percentage of the total votes each candidate received.
 
 ## Election Audit Results 
+
+Here is the script with the results all written out: 
+
+<img width="388" alt="Screen Shot 2021-09-01 at 2 39 51 PM" src="https://user-images.githubusercontent.com/88408350/131748974-dbd14196-dff2-481b-a6f7-7d379d5e2c55.png">
+
 **1. How many votes were cast in this congressional election?** 
 
 369,711
